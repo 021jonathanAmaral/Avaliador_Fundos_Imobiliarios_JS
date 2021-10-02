@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>FII</title>
+</head>
+<body>
+    
+    <header>
+        <div class="header">
+
+            <div><strong>Código do FII</strong><input type="text" name="" id=""></div>
+            <div><strong>Setor de Atuação </strong><input type="text" name="" id=""></div>
+        </div>
+    
+    </header>
+
+    <section>
+        <div class="Inputs">
+           
+
+
+
+           <div class="infos">
+               <div class="Vacancia">
+                        <h4>Vacancia</h4>
+                        <input type="number" name="Patr" id="txtVac" placeholder="00,00%">
+               </div>
+
+                        <div class="liquidez">
+                                <h4>liquidez</h4>
+                                <input type="number" name="txtLiq" id="txtLiq" placeholder="Nº Negociações">
+                       </div>
+           </div>
+           
+
+
+
+
+           
+            <div class="PVPA">
+                <div class="pvpa1">
+               
+                <div class="Patrimonio">
+                    <h4>Valor Patrimonial</h4>
+                    <input type="number" name="Patr" id="txtPatrimonioLiquido" placeholder="R$ 000.00">
+                </div>
+
+                        <div class="cotasEmitidas">
+                            <h4>Cotas Emitidas</h4>
+                            <input type="number" name="cotas" id="txtcotas" placeholder="000.000,00">
+                        </div> 
+                    </div>
+                </div>
+                    <div class="pvpa2">
+                                <div class="PreçoCotas">
+                                    <h4>Preço da cota</h4>
+                                    <input type="number" name="cotasprice" id="cotasprice" placeholder="R$ 000,00">
+                                </div>
+                                        <div class="DividendosPagos">
+                                            <h4>Dividendos Pagos</h4>
+                                            <input type="number" name="Patr" id="diviP" placeholder="R$ 000,00" >
+                                        </div>
+
+                    </div>
+
+
+
+            
+
+            <div class="Other">
+                    <div class="QuatAtiv">
+                        <h4>Total de Ativos</h4>
+                        <input type="number" name="Patr" id="quaativ" placeholder="000">
+                    </div>
+
+                            <div class="QuatGeo">
+                                <h4>Estados presentes</h4>
+                                <input type="number" name="Patr" id="quageo"placeholder="00">
+                            </div>
+
+
+
+            </div>
+
+                                        <div class="botao2">
+                                                <div class="botao" onclick="calcular()"><h3>AVALIAR</h3></div>
+                                        </div>
+
+        </div>
+
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+        <div class="Outputs">
+            
+            <div class="esquerda">
+            <DIV class="Line1">
+                <div class="coluna1"><h4>Vacância:</h4></div>
+                
+               
+            </DIV>
+
+            <DIV class="Line1">
+                <div class="coluna1"><h4>Dividend Yeld:</h4></div>
+               
+                
+            </DIV>
+
+            <DIV class="Line1">
+                <div class="coluna1"><h4>Valor Patrimonial:</h4></div>
+               
+               
+            </DIV>
+
+            <DIV class="Line1">
+                <div class="coluna1"><h4>P/VPA:</h4></div>
+               
+                
+            </DIV>
+
+            <DIV class="Line1">
+                <div class="coluna1"><h4>Ativos:</h4></div>
+                
+               
+            </DIV>
+
+            <DIV class="Line1">
+                <div class="coluna1"><h4>Geo Distribuição:</h4></div>
+               
+                
+            </DIV>
+        </div>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+        <div class="meio">
+        
+            <DIV class="Line1">
+                <div class="coluna2"><h4 id="ValorVacancia">000000</h4></div>
+              
+               
+            </DIV>
+
+            <DIV class="Line1">
+                <div class="coluna2"><h4 id="NumDY">000000</h4></div>
+               
+                
+            </DIV>
+
+            <DIV class="Line1">
+                <div class="coluna2"><h4 id ='lIQUIDEZVAL'>000000</h4></div>
+               
+               
+            </DIV>
+
+            <DIV class="Line1">
+                <div class="coluna2"><h4 id="VPnum">000000</h4></div>
+              
+                
+            </DIV>
+
+            <DIV class="Line1">
+                <div class="coluna2"><h4 id="AtivosVal">000000</h4></div>
+               
+               
+            </DIV>
+
+            <DIV class="Line1">
+                <div class="coluna2"><h4 id ="Geo">000000</h4></div>
+               
+                
+            </DIV>
+       </div>
+       
+      
+
+
+
+
+
+
+
+
+
+
+
+
+       <div class="direita">
+            <DIV class="Line1">
+                <div class="coluna3"><h4 id="ValorVacanciaAva">---</h4></div>
+              
+               
+            </DIV>
+
+            <DIV class="Line1">
+                <div class="coluna3"><h4 id="AvaDY">---</h4></div>
+               
+                
+            </DIV>
+
+            <DIV class="Line1">
+                <div class="coluna3"><h4  id="lIQUIAVA">---</h4></div>
+               
+               
+            </DIV>
+
+            <DIV class="Line1">
+                <div class="coluna3"><h4 id="VPAVA">---</h4></div>
+              
+                
+            </DIV>
+
+            <DIV class="Line1">
+                <div class="coluna3"><h4 id="AtivosAva">---</h4></div>
+               
+               
+            </DIV>
+
+            <DIV class="Line1">
+                <div class="coluna3"><h4 id="GeoVal"> ---</h4></div>
+               
+                
+            </DIV>
+        </div>
+        </div>
+    
+   
+    </section>
+
+    <footer><p>&copy; Jonathan Cristovão do Amaral</p></footer>
+
+</body>
+<script src="main.js"></script>
+</html>
